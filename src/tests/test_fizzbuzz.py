@@ -4,7 +4,7 @@ Following TDD Red-Green-Refactor cycle.
 See CLAUDE.md for the step-by-step guide.
 """
 
-from src.fizzbuzz import fizzbuzz_of
+from src.fizzbuzz import fizzbuzz_of, fizzbuzz_1_to
 
 
 def test_1_is_string():
@@ -45,3 +45,16 @@ def test_10_is_buzz():
 def test_15_is_fizzbuzz():
     """Test that 15 returns 'FizzBuzz' (multiple of both 3 and 5)."""
     assert fizzbuzz_of(15) == "FizzBuzz"
+
+
+def test_sequence_to_5():
+    """Test that fizzbuzz_1_to(5) returns correct sequence."""
+    assert fizzbuzz_1_to(5) == ["1", "2", "Fizz", "4", "Buzz"]
+
+
+def test_sequence_default_is_100():
+    """Test that fizzbuzz_1_to() defaults to 100 items."""
+    result = fizzbuzz_1_to()
+    assert len(result) == 100
+    assert result[0] == "1"
+    assert result[99] == "Buzz"

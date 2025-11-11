@@ -40,3 +40,8 @@ def test_5_is_buzz():
 def test_10_is_buzz():
     """Test that 10 returns 'Buzz' (triangulate)."""
     assert fizzbuzz_of(10) == "Buzz"
+
+
+def test_15_is_fizzbuzz():
+    """Test that 15 returns 'FizzBuzz' (multiple of both 3 and 5)."""
+    assert fizzbuzz_of(15) == "FizzBuzz"

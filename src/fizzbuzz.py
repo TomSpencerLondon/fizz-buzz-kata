@@ -10,6 +10,8 @@ def fizzbuzz_of(number):
     Returns:
         String representation according to FizzBuzz rules
     """
+    if number % 15 == 0:
+        return "FizzBuzz"
     if number % 3 == 0:
         return "Fizz"
     if number % 5 == 0:

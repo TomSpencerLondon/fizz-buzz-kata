@@ -12,5 +12,6 @@ def fizzbuzz_of(number):
     """
     if number % 3 == 0:
         return "Fizz"
-    else:
-        return str(number)
+    if number % 5 == 0:
+        return "Buzz"
+    return str(number)

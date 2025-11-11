@@ -30,3 +30,13 @@ def test_3_is_fizz():
 def test_6_is_fizz():
     """Test that 6 returns 'Fizz' (triangulate)."""
     assert fizzbuzz_of(6) == "Fizz"
+
+
+def test_5_is_buzz():
+    """Test that 5 returns 'Buzz'."""
+    assert fizzbuzz_of(5) == "Buzz"
+
+
+def test_10_is_buzz():
+    """Test that 10 returns 'Buzz' (triangulate)."""
+    assert fizzbuzz_of(10) == "Buzz"

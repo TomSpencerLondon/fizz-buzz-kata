@@ -24,9 +24,32 @@ You'll first build a single-number API, then a sequence API for 1..100.
 1. **Red**: add one failing test (only one new assertion at a time)
 2. **Green**: write the simplest code to pass all tests
 3. **Refactor**: improve the code without changing behavior. Keep tests green
-4. **Repeat**
+4. **Commit**: commit regularly with descriptive messages documenting the phase and functionality
+5. **Repeat**
 
 Keep each change small enough that an AI pair can follow and reason about it.
+
+### Commit Strategy
+
+**Commit frequently** after completing each phase or logical grouping of tests. This creates a reviewable history that makes it easy to:
+- Understand the TDD progression
+- See how the solution evolved
+- Learn from the step-by-step approach
+- Rollback if needed
+
+**Commit message format:**
+```
+Phase X: Brief description of what was added
+
+TDD Red-Green-Refactor cycle:
+- Test description: What changed in production code
+- Test description: What changed in production code
+
+Tests: X passing
+Coverage: X%
+```
+
+Example: After completing Phase A & B, commit with details about which tests were added and what production code changes were made at each step.
 
 ### Step-by-Step Plan
 

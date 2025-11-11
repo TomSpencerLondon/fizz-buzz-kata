@@ -104,7 +104,51 @@ Follow the Red-Green-Refactor cycle as described in [CLAUDE.md](CLAUDE.md):
 1. **Red**: Write a failing test
 2. **Green**: Write the simplest code to make it pass
 3. **Refactor**: Improve the code without changing behavior
-4. **Repeat**
+4. **Commit**: Commit with descriptive message documenting the phase
+5. **Repeat**
+
+### FizzBuzz Kata Phases
+
+The kata progresses through 5 phases, each building on the previous:
+
+#### Phase A: Numbers that are not multiples of 3 or 5
+- Test 1→"1": Start with hardcoded return value
+- Test 2→"2": Add if/else logic
+- Test 4→"4": **Refactor** to `str(number)` - remove duplication
+- **Learning**: Fake it till you make it, then refactor
+
+#### Phase B: Multiples of 3 produce "Fizz"
+- Test 3→"Fizz": Add modulo check (`number % 3 == 0`)
+- Test 6→"Fizz": **Triangulation** - confirms logic is general
+- **Learning**: Triangulation ensures the solution isn't hardcoded
+
+#### Phase C: Multiples of 5 produce "Buzz"
+- Test 5→"Buzz": Add modulo check (`number % 5 == 0`)
+- Test 10→"Buzz": **Triangulation** - confirms logic works
+- **Learning**: Build incrementally, one behavior at a time
+
+#### Phase D: Multiples of both 3 and 5 produce "FizzBuzz"
+- Test 15→"FizzBuzz": **Initial failure** - returned "Fizz"
+- **Fix**: Check combined case first (`number % 15 == 0`)
+- **Learning**: Order matters! Combined check must precede individual checks
+
+#### Phase E: Sequence API (fizzbuzz_1_to)
+- Test sequence 1-5: Build list using `fizzbuzz_of`
+- Test default n=100: Add default parameter
+- **Learning**: Reuse existing functions, don't duplicate logic
+
+### Git Commit History
+
+Review the TDD progression:
+```bash
+git log --oneline
+```
+
+Each commit shows:
+- Which phase was implemented
+- Which tests were added
+- How production code evolved
+- Red-Green-Refactor details
 
 ## Quick Start
 

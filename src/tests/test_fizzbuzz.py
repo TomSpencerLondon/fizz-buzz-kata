@@ -4,13 +4,29 @@ Following TDD Red-Green-Refactor cycle.
 See CLAUDE.md for the step-by-step guide.
 """
 
-# Import your fizzbuzz functions here once you create them
-# from src.fizzbuzz import fizzbuzz_of, fizzbuzz_1_to
+from src.fizzbuzz import fizzbuzz_of
 
 
-def test_placeholder():
-    """Placeholder test to verify pytest is working.
+def test_1_is_string():
+    """Test that 1 returns '1'."""
+    assert fizzbuzz_of(1) == "1"
 
-    Delete this test when you start implementing the kata.
-    """
-    assert True
+
+def test_2_is_string():
+    """Test that 2 returns '2'."""
+    assert fizzbuzz_of(2) == "2"
+
+
+def test_4_is_string():
+    """Test that 4 returns '4'."""
+    assert fizzbuzz_of(4) == "4"
+
+
+def test_3_is_fizz():
+    """Test that 3 returns 'Fizz'."""
+    assert fizzbuzz_of(3) == "Fizz"
+
+
+def test_6_is_fizz():
+    """Test that 6 returns 'Fizz' (triangulate)."""
+    assert fizzbuzz_of(6) == "Fizz"
